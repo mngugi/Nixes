@@ -29,11 +29,12 @@ Welcome to the Nixes wiki!
 **execute the following command in terminal to open the program.**
 
 `$ virtualbox`
+
  ---
 
 ### To Install IPTables on Fedora
 
-1.
+
 **disable firewalld using the systemctl command.**
 
 `sudo systemctl stop firewalld`
@@ -54,7 +55,7 @@ systemctl enable iptables.service
 **Configure IPTables file**
 `/etc/sysconfig/iptables`
 
-**IPTables Lists **
+**IPTables Lists**
 `iptables -L`
 
 **Stop and Disable IPTables**
