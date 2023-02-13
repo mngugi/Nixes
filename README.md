@@ -1,4 +1,3 @@
-# Nixes
 Welcome to the Nixes wiki!
 
 ### Install VirtualBox on Fedora
@@ -30,4 +29,37 @@ Welcome to the Nixes wiki!
 **execute the following command in terminal to open the program.**
 
 `$ virtualbox`
+ ---
 
+### To Install IPTables on Fedora
+
+1.
+**disable firewalld using the systemctl command.**
+
+`sudo systemctl stop firewalld`
+
+`sudo systemctl disable firewalld`
+
+`systemctl mask firewalld`
+
+### Install IPTables
+`sudo dnf install iptables-services`
+
+**Enable IPTables**
+
+systemctl start iptables.service
+
+systemctl enable iptables.service
+
+**Configure IPTables file**
+`/etc/sysconfig/iptables`
+
+**IPTables Lists **
+`iptables -L`
+
+**Stop and Disable IPTables**
+`sudo systemctl stop iptables`
+`sudo systemctl disable iptables`
+
+**Restart IPTables**
+`sudo systemctl restart iptables`
