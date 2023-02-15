@@ -29,12 +29,11 @@ Welcome to the Nixes wiki!
 **execute the following command in terminal to open the program.**
 
 `$ virtualbox`
-
  ---
 
 ### To Install IPTables on Fedora
 
-
+1.
 **disable firewalld using the systemctl command.**
 
 `sudo systemctl stop firewalld`
@@ -64,3 +63,18 @@ systemctl enable iptables.service
 
 **Restart IPTables**
 `sudo systemctl restart iptables`
+
+### Install Golang
+```
+sudo dnf install golang
+mkdir -p $HOME/go
+echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
+source $HOME/.bashrc
+
+```
+Check that GOPATH is set correctly with this command:
+
+```
+go env GOPATH
+/home/user/go
+```
