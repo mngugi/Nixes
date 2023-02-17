@@ -99,9 +99,4 @@ sudo rpm -e <file>.rpm
 $ Download RPM Packages from the Repository
 sudo yumdownloader packagename
     
-
-
-
-
-
 ```
