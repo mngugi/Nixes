@@ -78,3 +78,30 @@ Check that GOPATH is set correctly with this command:
 go env GOPATH
 /home/user/go
 ```
+### Install an RPM File On Linux OS CentOS, RHEL, & Fedora
+
+```
+sudo yum install wget
+sudo dnf install wget
+wget http://<website>/sample_file.rpm
+sudo rpm -i <file>.rpm
+
+$ Install on Fedora
+sudo rpm -i <file>.rpm
+sudo dnf localinstall <file>.rpm
+
+$ Remove Rpm package
+sudo rpm -e <file>.rpm
+    -q – This option tells RPM to query the file
+    -p – This option lets you specify the target package to query
+    -R – This lists the requirements for the package
+
+$ Download RPM Packages from the Repository
+sudo yumdownloader packagename
+    
+
+
+
+
+
+```
