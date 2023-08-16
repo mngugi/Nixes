@@ -100,3 +100,9 @@ $ Download RPM Packages from the Repository
 sudo yumdownloader packagename
     
 ```
+
+---
+
+**Install nasm on fedora **
+`sudo dnf install nasm`
+
