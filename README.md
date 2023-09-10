@@ -131,17 +131,17 @@ After installation, the package info can be seen from:
 **3: Configure MySQL server on Fedora**
 After installation of MySQL 8.0 on Fedora, you need to do initial configuration to secure it.
 
-1. Start and enable mysqld service:
+**1. Start and enable mysqld service:**
 ```sql
 sudo systemctl start mysqld.service
 sudo systemctl enable mysqld.service
 ```
-2. Copy the generated random password for the root user
+**2. Copy the generated random password for the root user**
 `sudo grep 'A temporary password' /var/log/mysqld.log |tail -1`
 Take note the printed password:
 
 `A temporary password is generated for root@localhost: 1ph/axo>vJe;`
-3. Start MySQL Secure Installation to change the root password, Disallow root login remotely, remove anonymous users and remove test database.
+**3. Start MySQL Secure Installation to change the root password, Disallow root login remotely, remove anonymous users and remove test database.**
 
 ```sql
 `$ sudo mysql_secure_installation`
@@ -177,7 +177,7 @@ Success.
 All done!
 
 ```
-4. Connect to MySQL Database as root user and create a test database.
+**4. Connect to MySQL Database as root user and create a test database.**
 
 ```sql
 $ sudo mysql -u root -p
