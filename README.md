@@ -253,3 +253,38 @@ sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" \
 service name="mysql" source address="10.1.1.0/24" accept'
 
 ```
+**Setup fastest mirror in Fedora- Dnf**
+
+Edit the file
+
+`sudo nano /etc/dnf/dnf.conf`
+
+Once the file opens the content should look something like this.
+
+```php
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=False
+skip_if_unavailable=True
+```
+Add below the line skip_if_unavaiable=True the following.
+
+`fastestmirror=1`
+The dnf.conf should look like this.
+```php
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=False
+skip_if_unavailable=True
+fastestmirror=1
+```
+Code language: PHP (php)
+Save the file.
+
+Run the following command.
+
+`sudo dnf clean all`
