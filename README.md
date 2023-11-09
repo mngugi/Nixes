@@ -131,17 +131,17 @@ After installation, the package info can be seen from:
 **3: Configure MySQL server on Fedora**
 After installation of MySQL 8.0 on Fedora, you need to do initial configuration to secure it.
 
-**1. Start and enable mysqld service:**
+1. Start and enable mysqld service:
 ```sql
 sudo systemctl start mysqld.service
 sudo systemctl enable mysqld.service
 ```
-**2. Copy the generated random password for the root user**
+2. Copy the generated random password for the root user
 `sudo grep 'A temporary password' /var/log/mysqld.log |tail -1`
 Take note the printed password:
 
 `A temporary password is generated for root@localhost: 1ph/axo>vJe;`
-**3. Start MySQL Secure Installation to change the root password, Disallow root login remotely, remove anonymous users and remove test database.**
+3. Start MySQL Secure Installation to change the root password, Disallow root login remotely, remove anonymous users and remove test database.
 
 ```sql
 `$ sudo mysql_secure_installation`
@@ -177,7 +177,7 @@ Success.
 All done!
 
 ```
-**4. Connect to MySQL Database as root user and create a test database.**
+4. Connect to MySQL Database as root user and create a test database.
 
 ```sql
 $ sudo mysql -u root -p
@@ -253,38 +253,6 @@ sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" \
 service name="mysql" source address="10.1.1.0/24" accept'
 
 ```
-**Setup fastest mirror in Fedora- Dnf**
 
-Edit the file
+---
 
-`sudo nano /etc/dnf/dnf.conf`
-
-Once the file opens the content should look something like this.
-
-```php
-[main]
-gpgcheck=1
-installonly_limit=3
-clean_requirements_on_remove=True
-best=False
-skip_if_unavailable=True
-```
-Add below the line skip_if_unavaiable=True the following.
-
-`fastestmirror=1`
-The dnf.conf should look like this.
-```php
-[main]
-gpgcheck=1
-installonly_limit=3
-clean_requirements_on_remove=True
-best=False
-skip_if_unavailable=True
-fastestmirror=1
-```
-Code language: PHP (php)
-Save the file.
-
-Run the following command.
-
-`sudo dnf clean all`
