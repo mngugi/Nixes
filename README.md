@@ -2,8 +2,11 @@ Welcome to the Nixes wiki!
 
 ### Install VirtualBox on Fedora
 
-`$ sudo dnf -y install @development-tools`
-`$ sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras`
+```C
+$ sudo dnf -y install @development-tools
+$ sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras
+
+```
 
 **add the VirtualBox RPM repository.**
 
@@ -256,3 +259,37 @@ service name="mysql" source address="10.1.1.0/24" accept'
 
 ---
 
+### Configure DNF for a Quicker Mirror Updates and Repos Installations Fedora
+
+
+```C
+sudo nano /etc/dnf/dnf.conf   see `man dnf.conf` for defaults and possible options
+
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=False
+skip_if_unavailable=True
+
+
+```
+
+A configuration file for DNF (Dandified Yum), a package manager used in some Linux distributions such as Fedora. Let me break down the configuration settings you have in this file:
+
+`gpgcheck=1:`
+ This setting enables GPG signature checking for packages. It ensures that packages are signed by the specified key before they are installed.
+
+`installonly_limit=3:`
+This setting limits the number of versions of a package that can be installed simultaneously. In this case, it's set to 3, meaning that only the three most recent versions of a package will be kept.
+
+`clean_requirements_on_remove=True:`
+When a package is removed, this setting ensures that any dependencies that were installed only for that package and are no longer needed by other packages are also removed.
+
+`best=False:`
+This setting, when set to False, prevents DNF from automatically upgrading to the latest version of a package if a newer version is available. If set to True, DNF will try to upgrade to the latest version.
+
+`skip_if_unavailable=True:`
+If a repository is unavailable or encountering errors, this setting instructs DNF to skip it and proceed with other available repositories. If set to False, DNF would fail if any repository is unreachable.
+
+This configuration file allows you to customize the behavior of DNF according to your preferences and requirements.
