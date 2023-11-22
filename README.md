@@ -293,3 +293,14 @@ This setting, when set to False, prevents DNF from automatically upgrading to th
 If a repository is unavailable or encountering errors, this setting instructs DNF to skip it and proceed with other available repositories. If set to False, DNF would fail if any repository is unreachable.
 
 This configuration file allows you to customize the behavior of DNF according to your preferences and requirements.
+
+---
+
+### Connect Web-Cam on Fedora
+```HTML
+sudo fuser -v /dev/video*
+sudo lsmod | grep uvcvideo
+sudo dnf install v4l-utils
+v4l2-ctl --list-devices
+sudo dnf install guvcview
+```
