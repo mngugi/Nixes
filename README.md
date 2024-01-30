@@ -34,6 +34,32 @@ $ sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5
 `$ virtualbox`
  ---
 
+# or 
+
+### Step 1. First, install the required dependencies:
+
+`$ sudo dnf -y install @development-tools`
+`$ sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras`
+
+### Step 2. Next, we will add the VirtualBox package repository by downloading it from virtualbox.org:
+
+`$ sudo wget -P /etc/yum.repos.d/ https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo`
+
+### Step 3. Import the VirtualBox GPG key:
+
+`$ sudo dnf search virtualbox`
+
+Answer Y when asked for confirmation.
+
+### Step 4. Finally, install the latest version of VirtualBox:
+
+`$ sudo dnf install VirtualBox <--version -->`
+
+### Step 5. Add your user to the vboxusers group to enable USB usage:
+
+`$ sudo usermod -aG vboxusers $USER`
+
+
 ### To Install IPTables on Fedora
 
 1.
