@@ -2,7 +2,7 @@ Welcome to the Nixes wiki!
 
 ### Install VirtualBox on Fedora
 
-```C
+```bash
 $ sudo dnf -y install @development-tools
 $ sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras
 
