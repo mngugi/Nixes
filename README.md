@@ -2,7 +2,7 @@ Welcome to the Nixes wiki!
 
 ### Install VirtualBox on Fedora
 
-```bash
+```C
 $ sudo dnf -y install @development-tools
 $ sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras
 
@@ -330,3 +330,16 @@ sudo dnf install v4l-utils
 v4l2-ctl --list-devices
 sudo dnf install guvcview
 ```
+
+---
+
+### Install Weka on Fedora
+
+```Bash
+sudo ln -s /var/lib/snapd/snap /snap
+
+sudo snap install weka
+
+```
+---
+
