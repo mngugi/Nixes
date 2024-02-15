@@ -343,3 +343,16 @@ sudo snap install weka
 ```
 ---
 
+### Installing and running Fedora Media Writer On Fedora
+
+On Fedora 25 or later, Fedora Media Writer is available in the default repository. You can use dnf to install the package.
+
+    To install the Fedora Media Writer using:
+
+    `sudo dnf install mediawriter`
+
+    Run the Fedora Media Writer:
+
+   ` mediawriter`
+
+---
