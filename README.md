@@ -347,19 +347,31 @@ sudo snap install weka
 
 On Fedora 25 or later, Fedora Media Writer is available in the default repository. You can use dnf to install the package.
 
-    1.To install the Fedora Media Writer using:
+    To install the Fedora Media Writer using:
 
-    
-```Bash
-    sudo dnf install mediawriter
-```
+    `sudo dnf install mediawriter`
 
+    Run the Fedora Media Writer:
 
-   2. Run the Fedora Media Writer:
-
-
-```Bash
-   mediawriter
-```
+   ` mediawriter`
 
 ---
+
+### How to fix WirePlumber high CPU usage
+
+ 1.Enable [monosoul/wireplumber-high-cpu-usage-fix](https://copr.fedorainfracloud.org/coprs/monosoul/wireplumber-high-cpu-usage-fix/) COPR
+```
+sudo dnf copr enable monosoul/wireplumber-high-cpu-usage-fix`
+
+```
+
+2. Update repo metadata and install the new WirePlumber package
+```
+sudo dnf update --refresh
+
+```
+3. Restart WirePlumber
+```
+systemctl --user restart wireplumber
+
+```
