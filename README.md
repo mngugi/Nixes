@@ -419,3 +419,12 @@ systemctl --user restart wireplumber
 
 ```
 ---
+### Installation of flatpak and WPS office on Fedora!
+
+```html
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+x1869@fedora:~$ flatpak install flathub com.wps.Office -y
+flatpak remote-modify --enable flathub
+```
+
+
