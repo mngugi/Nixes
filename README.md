@@ -399,6 +399,17 @@ systemctl --user restart wireplumber
 `sudo dnf --disablerepo="rpmfusion-nonfree*" install cuda`
 `sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
+### Add CUDA Bin Directory to PATH
+
+```BASH
+
+nano ~/.bashrc
+export PATH=/usr/local/cuda/bin:$PATH
+source ~/.bashrc
+nvcc --version
+
+```
+
 ### Reboot the system:
 
 `sudo reboot`
