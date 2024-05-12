@@ -399,17 +399,6 @@ systemctl --user restart wireplumber
 `sudo dnf --disablerepo="rpmfusion-nonfree*" install cuda`
 `sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
-### Add CUDA Bin Directory to PATH
-
-```BASH
-
-nano ~/.bashrc
-export PATH=/usr/local/cuda/bin:$PATH
-source ~/.bashrc
-nvcc --version
-
-```
-
 ### Reboot the system:
 
 `sudo reboot`
@@ -438,4 +427,34 @@ x1869@fedora:~$ flatpak install flathub com.wps.Office -y
 flatpak remote-modify --enable flathub
 ```
 
+---
+
+### Install zsh on Ubuntu
+
+```Bash
+Before installing z shell, you must first update your system by running the following command:
+
+sudo apt update
+After successfully updating your system, run the following command to install zshell.
+
+sudo apt install zsh
+
+sudo apt install zsh-syntax-highlighting zsh-autosuggestions
+
+sudo apt install qterminal fonts-firacode gnome-tweaks
+
+chsh -s /bin/zsh
+
+rm ~/.zshrc
+
+touch ~/.zshrc
+
+source .zshrc
+
+
+
+
+
+
+```
 
