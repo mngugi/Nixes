@@ -452,9 +452,18 @@ touch ~/.zshrc
 source .zshrc
 
 
+```
+---
 
+```css
 
+ ### Wireshark can output dissected packets as .csv file.
 
+1. Open .pcap file with Wireshark.
+2. Filter packets you want to export.
+3. Go to File->Packet Dissections->As CSV ...
+4. Select Displayed in Packet Range if you want to export only filtered packets.
+5. Save your file.
 
 ```
 
