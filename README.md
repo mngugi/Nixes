@@ -466,4 +466,38 @@ source .zshrc
 5. Save your file.
 
 ```
+### Install XAMPP on Linux:
+
+**Download the XAMPP installer package:**
+Visit [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html?ref=hackernoon.com)) to download the appropriate installer for your Linux distribution.
+
+**Change file permissions:**
+Open the terminal and navigate to the directory containing the downloaded package.
+Execute the command `sudo chmod +x xampp-linux-*-installer.run` to make the installer executable.
+
+**Run the XAMPP installer:**
+Run the installer using the command `sudo ./xampp-linux-*-installer.run.`
+
+**Follow the installation wizard:**
+The wizard will guide you through language selection, installation location, and component choices.
+
+**Start the XAMPP server:**
+After installation, start the server with `sudo /opt/lampp/lampp.`
+
+**Verify the installation:**
+Open a web browser and go to `http://localhost` to confirm the successful installation by viewing the XAMPP welcome page.
+
+### Linux:
+
+Open a terminal window.
+Navigate to the XAMPP installation directory (e.g., `/opt/lampp`).
+Run the following command:
+`sudo /opt/lampp/lampp start`
+Verify that the XAMPP server is running by opening a web browser and navigating to `http://localhost.`
+Once the XAMPP server is started, you can access it by navigating to `http://localhost` in your web browser. You can also access specific XAMPP components by navigating to the following URLs:
+
+* **Apache**:` http://localhost/xampp/`
+* **PHPMyAdmin:** `http://localhost/phpmyadmin/`
+* **MariaDB:**`http://localhost:3306/`
+* **FTP Server:** `ftp://localhost/`
 
